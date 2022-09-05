@@ -1,3 +1,1 @@
-# Docker
-# Kubernetes
-# Linux
+. ~/.aliases
