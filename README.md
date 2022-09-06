@@ -1,2 +1,2 @@
-# dotfiles
-My dotfiles =))
+# quoc9x's dotfiles
+## Setup

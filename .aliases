@@ -1,3 +1,13 @@
 # Linux
 # Docker
+alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
+alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage"
+
 # Kubernetes
+alias knode='kubectl get pods -A -o wide --field-selector spec.nodeName=payment-node09'
+function kevent() { kubectl get event --namespace $1 --field-selector involvedObject.name=$2; }
+alias knodeport="kubectl get svc --all-namespaces -o go-template='{{range .items}}{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{\"\n\"}}{{end}}{{end}}{{end}}'"
+### Auto-complete kubectl
+source <(kubectl completion bash)
+alias k='kubectl'
+complete -F __start_kubectl k
