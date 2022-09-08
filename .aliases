@@ -15,12 +15,13 @@ function djqfc() {
 alias djq='djqfc'
 
 # Kubernetes
+### Auto-complete kubectl
+source <(kubectl completion bash)
+alias k='kubectl'
+complete -F __start_kubectl k
+
 function kipnodefc() { k get nodes -o wide | awk '{print $6}'; }
 alias kipnode='kipnodefc'
 alias knode='function _knode(){ kubectl get pods -A -o wide --field-selector spec.nodeName=$1; };_knode'
 alias kevent='function _kevent(){ kubectl get event --namespace $1 --field-selector involvedObject.name=$2; };_kevent'
 alias knodeport="kubectl get svc --all-namespaces -o go-template='{{range .items}}{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{\"\n\"}}{{end}}{{end}}{{end}}'"
-### Auto-complete kubectl
-source <(kubectl completion bash)
-alias k='kubectl'
-complete -F __start_kubectl k
