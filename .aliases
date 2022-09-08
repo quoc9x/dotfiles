@@ -9,10 +9,10 @@ alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wa
 alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage"
 alias dmvb8='function _dmvb8(){ docker run --rm -v maven-repo:/root/.m2 -v "${PWD}":/src -w /src -e NEXUS_REPO_USER=$1 -e NEXUS_REPO_PASS=$2 maven:3.8.4-jdk-8-slim mvn -T 1C -s .m2/settings.xml "-Djar.finalName=application" -B -U package -DskipTests; };_dmvb8'
 alias dmvb11='function _dmvb11(){ docker run --rm -v maven-repo:/root/.m2 -v "${PWD}":/src -w /src -e NEXUS_REPO_USER=$1 -e NEXUS_REPO_PASS=$2 maven:3.8.4-jdk-11-slim mvn -T 1C -s .m2/settings.xml "-Djar.finalName=application" -B -U package -DskipTests; };_dmvb11'
-function djqfc() {
+function dyqfc() {
     docker run --rm --user="root" -v "${PWD}":/workspace -w /workspace mikefarah/yq eval ''$1' = "'$2'"' -i $3
 }
-alias djq='djqfc'
+alias dyq='dyqfc'
 
 # Kubernetes
 ### Auto-complete kubectl
