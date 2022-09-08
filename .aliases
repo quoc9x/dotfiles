@@ -9,10 +9,14 @@ alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wa
 alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage"
 alias dmvb8='function _dmvb8(){ docker run --rm -v maven-repo:/root/.m2 -v "${PWD}":/src -w /src -e NEXUS_REPO_USER=$1 -e NEXUS_REPO_PASS=$2 maven:3.8.4-jdk-8-slim mvn -T 1C -s .m2/settings.xml "-Djar.finalName=application" -B -U package -DskipTests; };_dmvb8'
 alias dmvb11='function _dmvb11(){ docker run --rm -v maven-repo:/root/.m2 -v "${PWD}":/src -w /src -e NEXUS_REPO_USER=$1 -e NEXUS_REPO_PASS=$2 maven:3.8.4-jdk-11-slim mvn -T 1C -s .m2/settings.xml "-Djar.finalName=application" -B -U package -DskipTests; };_dmvb11'
-alias djq='function _djq(){ docker run --rm --user="root" -v "${PWD}":/workspace -w /workspace mikefarah/yq@sha256 eval "$1 = $2" -i $3; };_djq'
+function djqfc() {
+    docker run --rm --user="root" -v "${PWD}":/workspace -w /workspace mikefarah/yq eval ''$1' = "'$2'"' -i $3
+}
+alias djq='djqfc'
 
 # Kubernetes
-alias kipnode="k get nodes -o wide | awk '{print $ 6}'"
+function kipnodefc() { k get nodes -o wide | awk '{print $6}'; }
+alias kipnode='kipnodefc'
 alias knode='function _knode(){ kubectl get pods -A -o wide --field-selector spec.nodeName=$1; };_knode'
 alias kevent='function _kevent(){ kubectl get event --namespace $1 --field-selector involvedObject.name=$2; };_kevent'
 alias knodeport="kubectl get svc --all-namespaces -o go-template='{{range .items}}{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{\"\n\"}}{{end}}{{end}}{{end}}'"
