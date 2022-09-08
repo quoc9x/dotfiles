@@ -1,0 +1,5 @@
+[user]
+        email = quoc9x@abc.com
+        name = quoc9x
+[credential]
+        helper = store
