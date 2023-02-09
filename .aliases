@@ -39,6 +39,7 @@ alias knodeport="kubectl get svc --all-namespaces -o go-template='{{range .items
 complete -C '/usr/local/bin/aws_completer' aws
 
 alias agp='echo $AWS_DEFAULT_PROFILE'
+alias alp='aws configure list-profiles'
 function aspfc() {
   if [[ -z "$1" ]]; then
     unset AWS_DEFAULT_PROFILE
