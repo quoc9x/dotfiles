@@ -8,6 +8,6 @@
   `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.bashrc >> ~/.bashrc`
 - aws-cli-alias
   - Download:   
-  `mkdri -p ~/.aws/cli
+  `mkdri -p ~/.aws/cli      
    curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.aws/cli/alias > ~/.aws/cli/alias
   `
