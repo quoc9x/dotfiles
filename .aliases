@@ -25,7 +25,10 @@ alias k='kubectl'
 complete -F __start_kubectl k
 
 alias kcg='kubectl config get-contexts'
+
 alias kcu='kubectl config use-context'
+complete -F _complete_alias kcu
+
 function kipnodefc() { k get nodes -o wide | awk '{print $6}'; }
 alias kipnode='kipnodefc'
 alias knode='function _knode(){ kubectl get pods -A -o wide --field-selector spec.nodeName=$1; };_knode'
