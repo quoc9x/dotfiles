@@ -23,7 +23,7 @@
 - Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) (Enabling zsh-autosuggestions in `.zshrc` file)    
 `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 - .zshrc file   
-`curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.zshrc >> ~/.zshrc`
+`curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.zshrc > ~/.zshrc`
 
 
 Note:   
