@@ -8,6 +8,7 @@ plugins=(
     zsh-autosuggestions
     git
     kubectl
+    aws
 )
 
 source $ZSH/oh-my-zsh.sh
