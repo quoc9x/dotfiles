@@ -12,4 +12,4 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases_zsh
+source $HOME/.zsh_aliases
