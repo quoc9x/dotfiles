@@ -26,13 +26,13 @@
 - .zshrc file   
 `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.zshrc > ~/.zshrc`
 #### Uninstall
-`rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \`   
-`chmod +x ~/.oh-my-zsh/tools/uninstall.sh && \`   
-`~/.oh-my-zsh/tools/uninstall.sh && \`   
-`sudo apt-get --purge remove zsh && \`   
-`rm -rf .zsh* && \`   
-`rm -rf .zcompdump*`   
-
+```rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
+chmod +x ~/.oh-my-zsh/tools/uninstall.sh && \
+~/.oh-my-zsh/tools/uninstall.sh && \
+sudo apt-get --purge remove zsh && \   
+rm -rf .zsh* && \
+rm -rf .zcompdump*
+```
 
 Note:   
 - Change default shell   
