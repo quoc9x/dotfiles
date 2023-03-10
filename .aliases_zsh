@@ -37,11 +37,6 @@ alias kevent='function _kevent(){ kubectl get event --namespace $1 --field-selec
 alias knodeport="kubectl get svc --all-namespaces -o go-template='{{range .items}}{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{\"\n\"}}{{end}}{{end}}{{end}}'"
 
 # AWS
-# Auto-complete aws cli
-## Make sure that aws_completer installed (which aws_completer)
-## Make sure path of aws_completer has in $PATH
-complete -C '/usr/local/bin/aws_completer' aws
-
 alias agp='echo $AWS_DEFAULT_PROFILE'
 alias alp='aws configure list-profiles'
 function aspfc() {
