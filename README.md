@@ -1,12 +1,9 @@
 # quoc9x's dotfiles
 ## Setup
-
-### Aliases
-- .aliases file (used by both Bash and ZSH)
+### Bash
+- .aliases file (used for Bash)
   - Download:    
   `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.aliases > ~/.aliases`
-
-### Bash
 - .bashrc file
   - Download:   
   `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.bashrc >> ~/.bashrc`
@@ -19,6 +16,9 @@
 
 ### ZSH
 #### Install
+- .aliases file (used for ZSH)
+  - Download:    
+  `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.aliases_zsh > ~/.aliases_zsh`
 - Install [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) and [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)   
 `sudo apt install zsh && echo "n" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) (Enabling zsh-autosuggestions in `.zshrc` file)    
