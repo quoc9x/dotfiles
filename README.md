@@ -18,7 +18,7 @@
 #### Install
 - .aliases file (used for ZSH)
   - Download:    
-  `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.zsh_aliases > ~/..zsh_aliases`
+  `curl https://raw.githubusercontent.com/quoc9x/dotfiles/main/.zsh_aliases > ~/.zsh_aliases`
 - Install [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) and [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)   
 `sudo apt install zsh && echo "n" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) (Enabling zsh-autosuggestions in `.zshrc` file)    
