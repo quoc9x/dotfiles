@@ -14,6 +14,8 @@ alias dmvb8na='function _dmvb8na(){ docker run --rm -v maven-repo:/root/.m2 -v "
 alias dmvb11='function _dmvb11(){ docker run --rm -v maven-repo:/root/.m2 -v "${PWD}":/src -w /src -e NEXUS_REPO_USER=$1 -e NEXUS_REPO_PASS=$2 maven:3.8.4-jdk-11-slim mvn -T 1C -s .m2/settings.xml "-Djar.finalName=application" -B -U package -DskipTests; };_dmvb11'
 alias dmvb11na='function _dmvb11na(){ docker run --rm -v maven-repo:/root/.m2 -v "${PWD}":/src -w /src maven:3.8.4-jdk-11-slim mvn -T 1C "-Djar.finalName=application" -B -U package -DskipTests; };_dmvb11na'
 
+alias dsec='function _dsec(){ docker run --rm -v trive-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --ignore-unfixed --severity HIGH,CRITICAL --exit-code 1 --no-progress $1; };_dsec'
+
 function dshafc() {
     docker inspect --format='{{index .RepoDigests 0}}' $1
 }
